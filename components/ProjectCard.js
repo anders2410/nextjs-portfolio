@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function ProjectCard({ project }) {
+const ProjectCard = ({ project }) => {
   const { title, slug, date, thumbnail } = project.fields;
   return (
     <div className="card">
@@ -20,6 +20,6 @@ function ProjectCard({ project }) {
       </Link>
     </div>
   );
-}
+};
 
 export default ProjectCard;
