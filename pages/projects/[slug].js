@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Skeleton from "../../components/Skeleton";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -8,6 +9,8 @@ const client = createClient({
 });
 
 export const Project = ({ project }) => {
+  if (!project) return <Skeleton />;
+
   const { featuredImage, title, date, tags, content } = project.fields;
 
   return (
@@ -47,7 +50,8 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    // Fallback pages are placeholder content whilst Next.js fetches new data for the page
+    fallback: true,
   };
 };
 
@@ -58,6 +62,15 @@ export const getStaticProps = async ({ params }) => {
     content_type: "project",
     "fields.slug": params.slug,
   });
+
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: { project: items[0] },

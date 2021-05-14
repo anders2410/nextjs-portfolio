@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects({ projects }) {
-  console.log(projects);
   return (
     <div className="recipe-list">
       {projects.map((project) => (
@@ -22,6 +21,7 @@ export async function getStaticProps() {
 
   return {
     props: { projects: res.items },
+    // Used in 'Incremental Static Regeneration'. Doesn't generate new content, only updates already existing
     revalidate: 1,
   };
 }
