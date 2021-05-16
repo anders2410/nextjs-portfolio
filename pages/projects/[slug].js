@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Skeleton from "../../components/Skeleton";
+import React from "react";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -14,7 +15,47 @@ export const Project = ({ project }) => {
   const { featuredImage, title, date, tags, content } = project.fields;
 
   return (
-    <div>
+    <main className="bg-gray-200">
+      <div className="p-10 container flex flex-col justify-center mx-auto">
+        <div className="mx-auto pb-10">
+          <Image
+            src={"https:" + featuredImage.fields.file.url}
+            width={featuredImage.fields.file.details.image.width}
+            height={featuredImage.fields.file.details.image.height}
+            className="rounded"
+          />
+        </div>
+        <section className="bg-gray-100 rounded shadow-xl lg:flex p-20">
+          <div className="text-lg mr-20">
+            <h1 className="text-6xl text-gray-700 mb-4 font-bold">{title}</h1>
+            <div className="text-gray-600 text-xl whitespace-pre-line">
+              {documentToReactComponents(content)}
+            </div>
+            <div className="flex flex-wrap pt-2">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-sm font-medium bg-gray-200 py-1 px-2 rounded text-black align-middle mr-2 mb-2 font-bold"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <span className="text-sm font-serif float-right">{date}</span>
+          </div>
+          {/*<div className="flex-shrink-0">
+            <Image
+              src="/img/anders_desert_view.jpg"
+              alt="A picture of me in the desert"
+              width={429}
+              height={885}
+              className="rounded"
+            />
+          </div>*/}
+        </section>
+      </div>
+    </main>
+    /*<div>
       <Image
         src={"https:" + featuredImage.fields.file.url}
         width={featuredImage.fields.file.details.image.width}
@@ -32,7 +73,7 @@ export const Project = ({ project }) => {
         <h3>Content</h3>
         <div>{documentToReactComponents(content)}</div>
       </div>
-    </div>
+    </div>*/
   );
 };
 
