@@ -30,15 +30,11 @@ const Technologies = () => {
         <div className="p-5">
           <h2 className="text-2xl text-white text-center font-bold">React</h2>
           <p className="text-white text-center text-xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            I have picked up React when I began my work at 'Styrelsen for IT og
+            Læring'. This is our main frontend framework together with
+            JavaScript. I'm very confident with the framework, and my JavaScript
+            skills are growing each day. I strive keep myself updated with the
+            latest trends in React like 'Hooks', 'Router' and so forth.
           </p>
         </div>
         <div className="p-5">
