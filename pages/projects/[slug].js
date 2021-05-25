@@ -9,7 +9,8 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export const Project = ({ project }) => {
+// This is a "nested route".
+const Project = ({ project }) => {
   if (!project) return <Skeleton />;
 
   const { featuredImage, title, date, tags, content } = project.fields;
@@ -43,60 +44,14 @@ export const Project = ({ project }) => {
             </div>
             <span className="text-sm font-serif float-right">{date}</span>
           </div>
-          {/*<div className="flex-shrink-0">
-            <Image
-              src="/img/anders_desert_view.jpg"
-              alt="A picture of me in the desert"
-              width={429}
-              height={885}
-              className="rounded"
-            />
-          </div>*/}
         </section>
       </div>
     </main>
-    /*<div>
-      <Image
-        src={"https:" + featuredImage.fields.file.url}
-        width={featuredImage.fields.file.details.image.width}
-        height={featuredImage.fields.file.details.image.height}
-      />
-      <div>
-        <h2>{title}</h2>
-        <h4>{date}</h4>
-        <h3>Tags:</h3>
-        {tags.map((tag) => (
-          <span key={tag}>{tag} </span>
-        ))}
-      </div>
-      <div className="content">
-        <h3>Content</h3>
-        <div>{documentToReactComponents(content)}</div>
-      </div>
-    </div>*/
   );
 };
 
-// This will create all the paths for our projects.
-export const getStaticPaths = async () => {
-  const res = await client.getEntries({ content_type: "project" });
-
-  const paths = res.items.map((item) => {
-    return {
-      params: {
-        slug: item.fields.slug,
-      },
-    };
-  });
-
-  return {
-    paths,
-    // Fallback pages are placeholder content whilst Next.js fetches new data for the page
-    fallback: true,
-  };
-};
-
-// This is called on each individual 'Project'
+// This is called on each individual 'Project'.
+// Can get the "context" as a prop, which includes params, etc.
 export const getStaticProps = async ({ params }) => {
   // Will always return an array
   const { items } = await client.getEntries({
@@ -118,5 +73,26 @@ export const getStaticProps = async ({ params }) => {
     revalidate: 1,
   };
 };
+
+// This will create all the paths for our projects.
+export const getStaticPaths = async () => {
+  const res = await client.getEntries({ content_type: "project" });
+
+  const paths = res.items.map((item) => {
+    return {
+      params: {
+        slug: item.fields.slug,
+      },
+    };
+  });
+
+  return {
+    paths,
+    // Fallback pages are placeholder content whilst Next.js fetches new data for the page
+    fallback: true,
+  };
+};
+
+// The last one is 'getServerSideProps', which will request the data when called.
 
 export default Project;

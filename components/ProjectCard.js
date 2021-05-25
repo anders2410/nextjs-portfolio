@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
           className="rounded-t-lg"
         />
         <section className="p-5">
-          <Link href={"/projects/" + slug}>
+          <Link href={`/projects/${slug}`}>
             <a>
               <h4 className="text-gray-800 text-xl font-bold mb-2 hover:text-red-700">
                 {title}

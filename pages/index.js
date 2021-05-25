@@ -1,3 +1,5 @@
+// Is used to add META-tags to your website
+import Head from "next/head";
 import { createClient } from "contentful";
 import Technologies from "../components/Technologies";
 import About from "../components/About";
@@ -5,9 +7,16 @@ import Projects from "../components/Projects";
 import Image from "next/image";
 import React from "react";
 
-export default function Homepage({ projects }) {
+const Homepage = ({ projects }) => {
   return (
-    <main>
+    <>
+      <Head>
+        <title>Anders Holt Knudsen</title>
+        <meta
+          name="keywords"
+          content="react, web development, programming, computer science, bachelor, portfolio, anders holt knudsen"
+        />
+      </Head>
       <section className="relative flex justify-center bg-gray-100 p-24">
         <div className="relative inset-1 z-20 w-32 h-32 lg:w-64 lg:h-64 mr-8 shadow-xl">
           <Image
@@ -32,11 +41,11 @@ export default function Homepage({ projects }) {
       <Technologies />
       <About />
       <Projects projects={projects} />
-    </main>
+    </>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -49,4 +58,6 @@ export async function getStaticProps() {
     // Used in 'Incremental Static Regeneration'. Doesn't generate new content, only updates already existing
     revalidate: 1,
   };
-}
+};
+
+export default Homepage;

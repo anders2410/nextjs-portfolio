@@ -18,15 +18,14 @@ const Technologies = () => {
             projects including my bachelor in 'Shortest Paths' and an app
             'HeavyMetalDK'. The latter was made in Android Studio. This also
             includes making games like 'Minesweeper' and 'Tic-Tac-Toe', which
-            can be seen under my projects or in my
+            can be seen under my projects or in my{" "}
             <a
               href="https://github.com/anders2410"
               className="inline-ref underline"
               target="_blank"
             >
-              {" "}
-              GitHub{" "}
-            </a>
+              GitHub
+            </a>{" "}
             repo.
           </p>
         </div>
