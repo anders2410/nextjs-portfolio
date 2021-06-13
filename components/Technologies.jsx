@@ -4,11 +4,11 @@ const Technologies = () => {
   return (
     <section className="flex flex-col bg-code-pattern pb-16 pt-8 lg:pt-16">
       <div className="flex justify-center mt-16">
-        <h1 className="text-gray-100 text-5xl justify-center mb-12 font-bold">
+        <h1 className="text-gray-100 text-3xl lg:text-5xl justify-center lg:mb-12 font-bold">
           My Technologies
         </h1>
       </div>
-      <div className="flex flex-nowrap lg:flex-row flex-col justify-center mx-60 mb-16">
+      <div className="flex flex-nowrap lg:flex-row flex-col justify-center sm:mx-32 lg:mx-60 mb-16">
         <div className="p-6">
           <h2 className="text-2xl text-white text-center font-semibold mb-2">
             Java

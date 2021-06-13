@@ -4,11 +4,13 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="bg-gray-200">
-      <div className="bg-gray-200 container p-10 mx-auto">
-        <section className="bg-gray-100 rounded shadow-xl lg:flex p-20">
-          <div className="text-lg mr-20">
-            <h1 className="text-6xl text-gray-700 mb-4 font-bold">Who am I?</h1>
-            <span className="text-gray-600 text-xl whitespace-pre-line">
+      <div className="bg-gray-200 container p-4 sm:p-8 lg:p-10 mx-auto">
+        <section className="bg-gray-100 rounded shadow-xl lg:flex p-6 sm:p-16 lg:p-20">
+          <div className="text-lg lg:mr-20">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl text-gray-700 mb-4 font-bold">
+              Who am I?
+            </h1>
+            <span className="text-gray-600 text-lg lg:text-xl whitespace-pre-line">
               I'm 25 years, currently living in Aarhus and have been doing so
               for the past 4 years. In summer 2020, I finished my Bachelor
               Degree in Computer Science. I am currently working as a software
@@ -36,7 +38,7 @@ const About = () => {
               with all the latest technological advances.
             </span>
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-5 lg:mt-0 mx-auto">
             <Image
               src="/img/anders_desert_view.jpg"
               alt="A picture of me in the desert"

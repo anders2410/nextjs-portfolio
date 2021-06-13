@@ -17,8 +17,8 @@ const Homepage = ({ projects }) => {
           content="react, web development, programming, computer science, bachelor, portfolio, anders holt knudsen"
         />
       </Head>
-      <section className="relative flex justify-center bg-gray-100 p-24">
-        <div className="relative inset-1 z-20 w-32 h-32 lg:w-64 lg:h-64 mr-8 shadow-xl">
+      <section className="relative flex flex-col lg:flex-row justify-center bg-gray-100 p-6 sm:p-12 lg:p-24">
+        <div className="relative inset-1 z-20 w-64 h-64 mx-auto lg:mx-0 lg:mr-6 mb-6 shadow-xl">
           <Image
             src="/img/square_profile_picture.jpg"
             alt="A profile picture of me"
@@ -27,13 +27,13 @@ const Homepage = ({ projects }) => {
             className="rounded-lg"
           />
         </div>
-        <div className="flex flex-col">
-          <h1 className="text-8xl text-gray-600">
+        <div className="flex flex-col mx-auto lg:mx-0">
+          <h1 className="text-5xl lg:text-8xl text-gray-600">
             Hi, I am
             <br />
             <strong className="text-black">Anders Holt</strong>
           </h1>
-          <p className="text-right bg-red-700 p-2 mt-4 text-2xl font-bold font-mono">
+          <p className="text-right bg-red-700 p-2 mt-4 text-lg sm:text-xl lg:text-2xl font-bold font-mono">
             aspiring software dev
           </p>
         </div>
