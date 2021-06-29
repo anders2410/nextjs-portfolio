@@ -23,10 +23,10 @@ const About = () => {
               summer vacations. Most recently I have been to Iceland, Poland,
               Iran and Japan. My most memorable journeys have taken me all over
               South-East Asia, where diving has become a favourite hobby of
-              mine. At home I enjoy spending time friends, and doing sports,
-              mostly floorball, where I play at the local club, Team Århus
-              Floorball. I also enjoy watching sports, almost anything, but my
-              favourite is football both European and American.
+              mine. At home I enjoy spending time with friends, and doing
+              sports, mostly floorball, where I play at the local club, Team
+              Århus Floorball. I also enjoy watching sports, almost anything,
+              but my favourite is football both European and American.
               <br /> <br />
               My interest in programming and software started in High
               School/Gymnasium with the subject 'Information Technologies', and

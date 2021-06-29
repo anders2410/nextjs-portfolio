@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 // https://tailwindcss.com/docs/responsive-design
 const Projects = ({ projects }) => {
   return (
-    <main className="bg-gray-800 py-10 md:py-20 p-6 md:px-12">
+    <main id="work" className="bg-gray-800 py-10 md:py-20 p-6 md:px-12">
       <section className="container mx-auto">
         <h1 className="text-gray-100 text-3xl md:text-5xl flex justify-center mb-6 font-bold">
           My Projects

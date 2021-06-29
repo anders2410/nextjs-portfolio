@@ -1,12 +1,26 @@
 import React from "react";
 
+const Line = () => (
+  <hr
+    style={{
+      color: "white",
+      backgroundColor: "white",
+      height: 1,
+      width: 150,
+      opacity: "50%",
+      marginBottom: "10px",
+    }}
+  />
+);
+
 const Technologies = () => {
   return (
-    <section className="flex flex-col bg-code-pattern pb-16 pt-8 lg:pt-16">
-      <div className="flex justify-center mt-16">
-        <h1 className="text-gray-100 text-3xl lg:text-5xl justify-center lg:mb-12 font-bold">
+    <section className="flex flex-col bg-code-pattern bg-cover pb-16 pt-8 lg:pt-16">
+      <div className="flex flex-col items-center justify-center mt-16">
+        <h1 className="text-gray-100 text-3xl lg:text-5xl lg:mb-10 font-bold">
           My Technologies
         </h1>
+        <Line />
       </div>
       <div className="flex flex-nowrap lg:flex-row flex-col justify-center sm:mx-32 lg:mx-60 mb-16">
         <div className="p-6">
