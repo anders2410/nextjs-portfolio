@@ -6,6 +6,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Image from "next/image";
 import React from "react";
+import { GetStaticProps } from "next";
 
 const Homepage = ({ projects }) => {
   return (
@@ -45,7 +46,7 @@ const Homepage = ({ projects }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
