@@ -28,15 +28,17 @@ const Technologies = () => {
             Java
           </h2>
           <p className="text-white text-center text-xl font-light">
-            Java is my most experienced language. I've made some major and minor
-            projects including my bachelor in 'Shortest Paths' and an app
-            'HeavyMetalDK'. The latter was made in Android Studio. This also
-            includes making games like 'Minesweeper' and 'Tic-Tac-Toe', which
-            can be seen under my projects or in my{" "}
+            Java is my most experienced language. I&apos;ve made some major and
+            minor projects including my bachelor in &apos;Shortest Paths&apos;
+            and an app &apos;HeavyMetalDK&apos;. The latter was made in Android
+            Studio. This also includes making games like &apos;Minesweeper&apos;
+            and &apos;Tic-Tac-Toe&apos;, which can be seen under my projects or
+            in my{" "}
             <a
               href="https://github.com/anders2410"
               className="inline-ref underline"
               target="_blank"
+              rel="noreferrer"
             >
               GitHub
             </a>{" "}
@@ -49,9 +51,9 @@ const Technologies = () => {
           </h2>
           <p className="text-white text-center text-xl font-light">
             Is my second most experienced language. I enjoy using it as I think
-            it's concise and simplistic. I've mostly used it in smaller projects
-            for data visualization, games or scripting, but also in 'Machine
-            Learning' at University.
+            it&apos;s concise and simplistic. I&apos;ve mostly used it in
+            smaller projects for data visualization, games or scripting, but
+            also in &apos;Machine Learning&apos; at University.
           </p>
         </div>
         <div className="p-6">
@@ -59,11 +61,12 @@ const Technologies = () => {
             React
           </h2>
           <p className="text-white text-center text-xl font-light">
-            I have picked up React when I began my work at 'Styrelsen for IT og
-            Læring'. This is our main frontend framework together with
-            JavaScript. I'm very confident with the framework, and my JavaScript
-            skills are growing each day. I strive keep myself updated with the
-            latest trends in React like 'Hooks', 'Router' and so forth.
+            I have picked up React when I began my work at &apos;Styrelsen for
+            IT og Læring&apos;. This is our main frontend framework together
+            with JavaScript. I&apos;m very confident with the framework, and my
+            JavaScript skills are growing each day. I strive keep myself updated
+            with the latest trends in React like &apos;Hooks&apos;,
+            &apos;Router&apos; and so forth.
           </p>
         </div>
       </div>

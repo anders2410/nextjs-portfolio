@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
-  const { title, slug, date, tags, description, thumbnail } = project.fields;
+  const { title, slug, tags, description, thumbnail } = project.fields;
   return (
     <div className="flex flex-col justify-between rounded-lg shadow-xl bg-white">
       <div>
         <Image
           src={"https:" + thumbnail.fields.file.url}
+          alt=""
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
           className="rounded-t-lg"

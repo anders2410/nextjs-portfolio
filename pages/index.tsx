@@ -1,13 +1,14 @@
 // Is used to add META-tags to your website
-import Head from "next/head";
-import { createClient } from "contentful";
-import Technologies from "../components/Technologies";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Image from "next/image";
-import React from "react";
-import { GetStaticProps } from "next";
+import Head from 'next/head'
+import { createClient } from 'contentful'
+import Technologies from '../components/Technologies'
+import About from '../components/About'
+import Projects from '../components/Projects'
+import Image from 'next/image'
+import React from 'react'
+import { GetStaticProps } from 'next'
 
+// @ts-ignore
 const Homepage = ({ projects }) => {
   return (
     <>
@@ -16,6 +17,23 @@ const Homepage = ({ projects }) => {
         <meta
           name="keywords"
           content="react, web development, programming, computer science, bachelor, portfolio, anders holt knudsen"
+        />
+
+        {/*These are some important META-tags for when sharing a link to this webpage.*/}
+        <meta
+          name="title"
+          property="og:title"
+          content="The Portfolio of Anders Holt Knudsen"
+        />
+        <meta
+          name="description"
+          property="og:description"
+          content="A collection of all my work and experiences I have gained through my study and work life."
+        />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://anders-holt-portfolio.vercel.app/img/website_preview.png"
         />
       </Head>
       <section className="relative flex flex-col lg:flex-row justify-center bg-gray-100 p-6 sm:p-12 lg:p-24">
@@ -43,22 +61,23 @@ const Homepage = ({ projects }) => {
       <About />
       <Projects projects={projects} />
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
+  // @ts-ignore
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+  })
 
-  const res = await client.getEntries({ content_type: "project" });
+  const res = await client.getEntries({ content_type: 'project' })
 
   return {
     props: { projects: res.items },
     // Used in 'Incremental Static Regeneration'. Doesn't generate new content, only updates already existing
     revalidate: 1,
-  };
-};
+  }
+}
 
-export default Homepage;
+export default Homepage

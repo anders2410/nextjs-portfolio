@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -12,12 +12,13 @@ const About = () => {
             </h1>
             <span className="text-gray-600 text-lg lg:text-xl whitespace-pre-line">
               <p className="mb-4 leading-relaxed">
-                I'm 25 years, currently living in Aarhus and have been doing so
-                for the past 4 years. In summer 2020, I finished my Bachelor
-                Degree in Computer Science. I am currently working as a software
-                developer at Styrelsen for IT og Læring, and have been doing so
-                since September 2020. I'm looking forward to applying my
-                knowledge from the University in real-life applications.
+                I&apos;m 25 years, currently living in Aarhus and have been
+                doing so for the past 4 years. In summer 2020, I finished my
+                Bachelor Degree in Computer Science. I am currently working as a
+                software developer at Styrelsen for IT og Læring, and have been
+                doing so since September 2020. I&apos;m looking forward to
+                applying my knowledge from the University in real-life
+                applications.
               </p>
               <p className="mb-4 leading-relaxed">
                 As a person, I am smiling and enjoying life. I love to travel
@@ -32,13 +33,14 @@ const About = () => {
               </p>
               <p className="mb-4 leading-relaxed">
                 My interest in programming and software started in High
-                School/Gymnasium with the subject 'Information Technologies',
-                and since then it has evolved and was the main reason I picked
-                Computer Science at University. Im very fund of technology in
-                general, and I aspire to keep up with the latest trends in both
-                software and hardware. I value development and creative
-                solutions with modern technologies and always strive to be
-                update-to-date with all the latest technological advances.
+                School/Gymnasium with the subject &apos;Information
+                Technologies&apos;, and since then it has evolved and was the
+                main reason I picked Computer Science at University. Im very
+                fund of technology in general, and I aspire to keep up with the
+                latest trends in both software and hardware. I value development
+                and creative solutions with modern technologies and always
+                strive to be update-to-date with all the latest technological
+                advances.
               </p>
             </span>
           </div>

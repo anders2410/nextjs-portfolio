@@ -32,7 +32,6 @@ const Project = ({ project }) => {
   if (!project) return <Skeleton />;
 
   const { featuredImage, title, date, tags, content } = project.fields;
-  console.log(content);
 
   return (
     <main className="bg-gray-200">
@@ -40,6 +39,7 @@ const Project = ({ project }) => {
         <div className="mx-auto pb-10">
           <Image
             src={"https:" + featuredImage.fields.file.url}
+            alt=""
             width={featuredImage.fields.file.details.image.width}
             height={featuredImage.fields.file.details.image.height}
             className="rounded"
