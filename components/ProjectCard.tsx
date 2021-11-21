@@ -1,13 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
+// @ts-ignore
 const ProjectCard = ({ project }) => {
-  const { title, slug, tags, description, thumbnail } = project.fields;
+  const { title, slug, tags, description, thumbnail } = project.fields
   return (
     <div className="flex flex-col justify-between rounded-lg shadow-xl bg-white">
       <div>
         <Image
-          src={"https:" + thumbnail.fields.file.url}
+          src={'https:' + thumbnail.fields.file.url}
           alt=""
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
@@ -39,7 +40,7 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard
