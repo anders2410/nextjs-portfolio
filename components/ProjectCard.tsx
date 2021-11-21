@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
         </section>
       </div>
       <div className="flex flex-wrap pt-2 p-5">
-        {tags.map((tag) => (
+        {tags.map((tag: string) => (
           <span
             key={tag}
             className="text-sm font-medium bg-gray-200 py-1 px-2 rounded text-black align-middle mr-2 mb-2 font-bold"
