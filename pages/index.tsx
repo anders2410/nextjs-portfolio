@@ -33,7 +33,7 @@ const Homepage = ({ projects }) => {
         <meta
           name="image"
           property="og:image"
-          content="../public/img/website_preview.png"
+          content="https://anders-holt-portfolio.vercel.app/img/website_preview.png"
         />
       </Head>
       <section className="relative flex flex-col lg:flex-row justify-center bg-gray-100 p-6 sm:p-12 lg:p-24">
