@@ -21,17 +21,14 @@ const Homepage = ({ projects }) => {
 
         {/*These are some important META-tags for when sharing a link to this webpage.*/}
         <meta
-          name="title"
           property="og:title"
           content="The Portfolio of Anders Holt Knudsen"
         />
         <meta
-          name="description"
           property="og:description"
           content="A collection of all my work and experiences I have gained through my study and work life."
         />
         <meta
-          name="image"
           property="og:image"
           content="https://anders-holt-portfolio.vercel.app/img/website_preview.png"
         />
