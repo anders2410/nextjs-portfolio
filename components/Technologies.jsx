@@ -22,7 +22,7 @@ const Technologies = () => {
         </h1>
         <Line />
       </div>
-      <div className="flex flex-nowrap lg:flex-row flex-col justify-center sm:mx-32 lg:mx-60 mb-16">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 justify-center sm:mx-32 lg:mx-60 mb-16">
         <div className="p-6">
           <h2 className="text-2xl text-white text-center font-semibold mb-2">
             Java
@@ -47,7 +47,7 @@ const Technologies = () => {
         </div>
         <div className="p-6">
           <h2 className="text-2xl text-white text-center font-semibold mb-2">
-            JavaScript/TypeScript
+            TypeScript
           </h2>
           <p className="text-white text-center text-xl font-light">
             Is my second most experienced language. All my JavaScript knowledge
@@ -59,14 +59,14 @@ const Technologies = () => {
         </div>
         <div className="p-6">
           <h2 className="text-2xl text-white text-center font-semibold mb-2">
-            React
+            Frontend frameworks
           </h2>
           <p className="text-white text-center text-xl font-light">
-            I have picked up React when I began my work at &apos;Styrelsen for
-            IT og Læring&apos;. This is our main frontend framework together
-            with JavaScript. I am very confident with the framework and strive
-            to keep myself updated with the latest trends in React like Hooks,
-            Router, NextJs, Vite and so forth.
+            I have used both React and Vue in my professional life, and feel
+            comfortable using both. In my current position I'm working with Vue,
+            Vite and Vuetify. I also strive to keep updated on the latest trends
+            regarding frontend and frontend tooling. This includes tools as
+            Vite, Next.js, ESBuild, Vitest and so forth.
           </p>
         </div>
       </div>
