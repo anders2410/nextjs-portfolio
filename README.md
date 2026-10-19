@@ -1,7 +1,8 @@
-## Welcome to my Portfolio!
+# Portfolio
 
-The stack is Next.js / Contentful / TailwindCSS
+Next.js (App Router) / Tailwind CSS / TypeScript.
 
-### How to set up TailwindCSS in Nextjs
-https://www.codementor.io/@andrewgbliss/how-to-setup-tailwind-css-in-next-js-1ch8izbtj6
-https://tailwindcss.com/docs/guides/nextjs
+```sh
+pnpm install
+pnpm dev
+```
