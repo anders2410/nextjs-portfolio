@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
 const sans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
-const mono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains-mono' })
 
 const description =
   'Software Engineer & Team Lead at Hakio, based in Aarhus. A collection of my work and experience.'
