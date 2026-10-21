@@ -97,7 +97,7 @@ const years = Math.floor((Date.now() - new Date('2020-09-01').getTime()) / 3.156
 
 const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="reveal border-t border-line py-20">
-    <h2 className="mb-10 font-mono text-sm uppercase tracking-widest text-accent">{title}</h2>
+    <h2 className="mb-10 font-mono text-sm text-accent">{title}</h2>
     {children}
   </section>
 )
@@ -109,7 +109,7 @@ export default function Home() {
         <Spotlight />
         <header className="relative mx-auto flex min-h-[85vh] max-w-5xl flex-col-reverse items-start justify-center gap-10 px-6 py-24 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="mb-4 font-mono text-accent">Hi, I am</p>
+            <p className="mb-4 font-mono text-accent">$ whoami</p>
             <h1 className="text-6xl font-bold leading-[0.95] tracking-tight sm:text-8xl">
               <span className="gradient-text">Anders</span>
               <br />
@@ -145,7 +145,7 @@ export default function Home() {
       </div>
 
       <main className="mx-auto max-w-5xl px-6">
-        <Section id="technologies" title="Technologies">
+        <Section id="technologies" title="01 / technologies">
           <p className="mb-10 max-w-prose text-lg leading-relaxed text-muted">
             A full-stack toolbox with a frontend core. These are the tools I work with day to day.
           </p>
@@ -176,11 +176,11 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="experience" title="Experience">
+        <Section id="experience" title="02 / experience">
           <Timeline items={experience} />
         </Section>
 
-        <Section id="about" title="About">
+        <Section id="about" title="03 / about">
           <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-16">
             <div className="max-w-prose">
               <p className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
